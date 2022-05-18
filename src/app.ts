@@ -1,8 +1,5 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import 'dotenv/config';
 import express from 'express';
-
 import config from './config';
 
 const startServer = async () => {
