@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "outDir": "./build",
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "strict": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@config": ["./src/config"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modueles", "test"]
+}
