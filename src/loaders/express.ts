@@ -18,6 +18,4 @@ export default (app: Application) => {
   app.use(helmet());
 
   app.use('/api', baseRouter);
-
-  console.log('nodeenv', process.env.NODE_ENV);
 };

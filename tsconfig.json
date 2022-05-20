@@ -14,7 +14,8 @@
       "@config": ["./src/config"],
       "@loaders": ["./src/loaders"],
       "@utils": ["./src/utils"],
-      "@routes": ["./src/routes"]
+      "@routes": ["./src/routes"],
+      "@models": ["./src/models"]
     }
   },
   "include": ["./src/**/*"],
