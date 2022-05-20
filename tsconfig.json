@@ -8,7 +8,10 @@
     "strict": true,
     "esModuleInterop": true,
     "paths": {
-      "@config": ["./src/config"]
+      "@*": ["src/*"],
+      "@config": ["./src/config"],
+      "@loaders": ["./src/loaders"],
+      "@utils": ["./src/utils"]
     }
   },
   "include": ["./src/**/*"],

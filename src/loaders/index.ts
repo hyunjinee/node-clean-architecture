@@ -1,11 +1,13 @@
 import { Application } from 'express';
 
+import logger from '@utils/logger';
 import expressLoader from './express';
 import mongooseLoader from './mongoose';
 
 export default async (app: Application) => {
   await mongooseLoader();
-  console.log('DB CONNECTED');
+  logger.info('DB CONNECTED');
+
   expressLoader(app);
-  console.log('Express INITIALIZED');
+  logger.info('Express INITIALIZED');
 };

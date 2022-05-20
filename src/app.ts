@@ -1,12 +1,16 @@
 import 'dotenv/config';
 import express from 'express';
-import config from './config';
+
+import config from '@config';
+import loaders from '@loaders';
+import logger from '@utils/logger';
 
 const startServer = async () => {
   const app = express();
+  await loaders(app);
 
   app.listen(config.port, () => {
-    console.log(`Server Started on port ${config.port}`);
+    logger.info(`Server Listening on port ${config.port}`);
   });
 };
 
