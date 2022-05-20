@@ -1,10 +1,11 @@
-import express, { Application } from 'express';
+import express, { Application, Express } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import swaggerUi from 'swagger-ui-express';
 
 import baseRouter from '@routes';
+import specs from './swagger';
 
 const options: cors.CorsOptions = {
   origin: ['http://localhost:3000'],
@@ -19,13 +20,5 @@ export default (app: Application) => {
   app.use(helmet());
 
   app.use('/api', baseRouter);
-  app.use(
-    '/docs',
-    swaggerUi.serve,
-    swaggerUi.setup(undefined, {
-      swaggerOptions: {
-        url: './swagger.json',
-      },
-    })
-  );
+  app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
 };
