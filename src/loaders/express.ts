@@ -3,6 +3,8 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 
+import baseRouter from '@routes';
+
 const options: cors.CorsOptions = {
   origin: ['http://localhost:3000'],
   credentials: true,
@@ -14,6 +16,8 @@ export default (app: Application) => {
   app.use(cookieParser());
   app.use(cors(options));
   app.use(helmet());
+
+  app.use('/api', baseRouter);
 
   console.log('nodeenv', process.env.NODE_ENV);
 };

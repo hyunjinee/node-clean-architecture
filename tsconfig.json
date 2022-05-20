@@ -13,7 +13,8 @@
       "@*": ["src/*"],
       "@config": ["./src/config"],
       "@loaders": ["./src/loaders"],
-      "@utils": ["./src/utils"]
+      "@utils": ["./src/utils"],
+      "@routes": ["./src/routes"]
     }
   },
   "include": ["./src/**/*"],

@@ -10,4 +10,5 @@
 - Express.js (REST API)
 - Jest, supertest (TDD)
 - Swagger (API Documentation)
-- MongoDB
+- MongoDB (typegoose)
+- pino
