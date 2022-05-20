@@ -7,6 +7,8 @@
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "strict": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "paths": {
       "@*": ["src/*"],
       "@config": ["./src/config"],
