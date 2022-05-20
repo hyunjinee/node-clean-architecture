@@ -2,6 +2,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
+import swaggerUi from 'swagger-ui-express';
 
 import baseRouter from '@routes';
 
@@ -18,4 +19,13 @@ export default (app: Application) => {
   app.use(helmet());
 
   app.use('/api', baseRouter);
+  app.use(
+    '/docs',
+    swaggerUi.serve,
+    swaggerUi.setup(undefined, {
+      swaggerOptions: {
+        url: './swagger.json',
+      },
+    })
+  );
 };

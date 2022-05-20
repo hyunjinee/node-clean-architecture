@@ -11,4 +11,3 @@
 - Jest, supertest (TDD)
 - Swagger (API Documentation)
 - MongoDB (typegoose)
-- pino
