@@ -40,7 +40,6 @@
     "jest": "^28.1.0",
     "supertest": "^6.2.3",
     "swagger": "^0.7.5",
-    "swagger-autogen": "^2.21.2",
     "swagger-jsdoc": "^6.2.1",
     "swagger-ui-express": "^4.4.0",
     "ts-jest": "^28.0.2",

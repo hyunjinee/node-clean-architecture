@@ -12,7 +12,7 @@ const options: swaggerJsdoc.Options = {
         'This is a simple CRUD API application made with Express and documented with Swagger',
       license: {
         name: 'MIT',
-        url: 'https://spdx.org/licenses/MIT.html',
+        url: 'https://github.com/hyunjinee/node-clean-architecture',
       },
       contact: {
         name: 'hyunjin',
