@@ -9,13 +9,15 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@*": ["src/*"],
       "@config": ["./src/config"],
       "@loaders": ["./src/loaders"],
       "@utils": ["./src/utils"],
       "@routes": ["./src/routes"],
-      "@models": ["./src/models"]
+      "@models": ["./src/models"],
+      "@schemas": ["./src/schemas"]
     }
   },
   "include": ["./src/**/*"],

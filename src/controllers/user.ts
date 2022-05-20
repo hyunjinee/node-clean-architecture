@@ -12,7 +12,7 @@ export const registerUser = async (req: Request, res: Response) => {
     await createUser({ username, email, password });
 
     return res.status(CREATED).send('user created successfully');
-  } catch (error) {
+  } catch (error: any) {
     if (error.code === 11000) {
       // unique user exists
       return res.status(CONFLICT).send('User already exists');
