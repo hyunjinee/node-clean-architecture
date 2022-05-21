@@ -10,4 +10,5 @@ export default async (app: Application) => {
 
   expressLoader(app);
   logger.info('Express INITIALIZED');
+  logger.info('Docs are available at /docs');
 };

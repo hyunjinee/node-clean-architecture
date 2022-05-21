@@ -1,10 +1,11 @@
 import mongoose from 'mongoose';
 
-import config from '@config';
+import config from '@config/index';
 import logger from '@utils/logger';
 
 export default async () => {
   try {
+    console.log('hwhyyywy');
     await mongoose.connect(config.mongoURL);
   } catch (error) {
     logger.info(
