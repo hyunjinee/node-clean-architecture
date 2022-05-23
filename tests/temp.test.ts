@@ -17,6 +17,8 @@ describe('product', () => {
       it('should return a 404,', () => {
         expect(true).toBe(true);
       });
+    });
+    describe('create product', () => {
       it('should return a 201', async () => {
         const productId = 'product-123';
         await supertest(app).get(`/api/producs/${productId}`).expect(404);

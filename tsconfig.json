@@ -8,8 +8,8 @@
     "strict": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "resolveJsonModule": true,
     "paths": {
       "@*": ["src/*"],

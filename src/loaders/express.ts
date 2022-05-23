@@ -5,7 +5,6 @@ import helmet from 'helmet';
 import swaggerUi from 'swagger-ui-express';
 
 import baseRouter from '@routes/index';
-import specs from './swagger';
 
 const options: cors.CorsOptions = {
   origin: ['http://localhost:3000'],
@@ -18,7 +17,21 @@ export default (app: Application) => {
   app.use(cookieParser());
   app.use(cors(options));
   app.use(helmet());
+  app.use(express.static('public'));
+
+  app.get('/ping', (req, res) => {
+    res.send({ message: 'pong' });
+  });
 
   app.use('/api', baseRouter);
-  app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
+  // app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
+  app.use(
+    '/docs',
+    swaggerUi.serve,
+    swaggerUi.setup(undefined, {
+      swaggerOptions: {
+        url: '/swagger.json',
+      },
+    })
+  );
 };

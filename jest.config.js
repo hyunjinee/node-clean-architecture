@@ -17,5 +17,6 @@ module.exports = {
     '@routes/(.*)': '<rootDir>/src/routes/$1',
     '@schemas/(.*)': '<rootDir>/src/schemas/$1',
   },
+  testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   clearMocks: true,
 };
