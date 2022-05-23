@@ -4,6 +4,13 @@
 
 ## Description
 
+- Express with TypeScript
+- build beautiful, clean node.js architecture
+- TypeDI Dependency Injection
+- Helmet Basic Security Features
+- Jest, Supertest Unit, E2E testing
+- JWT security strategy useing AccessToken, RefreshToken.
+
 ## Stack
 
 - TypeScript
