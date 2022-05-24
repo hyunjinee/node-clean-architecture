@@ -9,7 +9,7 @@
 - TypeDI Dependency Injection
 - Helmet Basic Security Features
 - Jest, Supertest Unit, E2E testing
-- JWT security strategy useing AccessToken, RefreshToken.
+- JWT security strategy using AccessToken, RefreshToken
 
 ## Stack
 

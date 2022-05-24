@@ -105,3 +105,6 @@ dist
 
 # public folder
 public
+
+# build folder
+build
