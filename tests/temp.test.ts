@@ -2,7 +2,6 @@ import supertest from 'supertest';
 import express from 'express';
 import expressLoader from '../src/loaders/express';
 import mongoose from 'mongoose';
-import config from '../src/config';
 
 const app = express();
 

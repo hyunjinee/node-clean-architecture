@@ -43,8 +43,11 @@
     "concurrently": "^7.2.1",
     "eslint": "^8.15.0",
     "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
     "jest": "^28.1.0",
+    "lint-staged": "^12.4.2",
     "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
     "supertest": "^6.2.3",
     "swagger": "^0.7.5",
     "swagger-jsdoc": "^6.2.1",
@@ -55,14 +58,23 @@
     "tsoa": "^4.1.0",
     "typescript": "^4.6.4"
   },
-  "jest": {
-    "rootDir": "src"
-  },
   "nodemonConfig": {
     "watch": [
       "src"
     ],
     "ext": "ts",
     "exec": "ts-node -r \"tsconfig-paths/register\" --files \"src/app.ts\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --fix && prettier --write",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

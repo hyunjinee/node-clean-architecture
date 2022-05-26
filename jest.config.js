@@ -1,12 +1,11 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
+  rootDir: './',
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testMatch: ['**/**/*.test.ts'],
   verbose: true,
   forceExit: true,
   moduleNameMapper: {
-    '@/(.*)': '<rootDir>/src/$1',
     '@utils/(.*)': '<rootDir>/src/utils/$1',
     '@config/(.*)': '<rootDir>/src/config/$1',
     '@loaders/(.*)': '<rootDir>/src/loaders/$1',
