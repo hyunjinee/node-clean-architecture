@@ -17,6 +17,7 @@ describe('product', () => {
         expect(true).toBe(true);
       });
     });
+
     describe('create product', () => {
       it('should return a 201', async () => {
         const productId = 'product-123';
