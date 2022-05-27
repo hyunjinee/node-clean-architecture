@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
 import swaggerUi from 'swagger-ui-express';
 
-import baseRouter from '@routes';
+import baseRouter from '@routes/index';
 
 const options: cors.CorsOptions = {
   origin: ['http://localhost:3000'],

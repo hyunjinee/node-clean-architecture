@@ -1,10 +1,11 @@
 /** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 module.exports = {
-  rootDir: './',
+  rootDir: '.',
   preset: 'ts-jest',
   testEnvironment: 'node',
-  verbose: true,
-  forceExit: true,
+  moduleNameMapper: {
+    'tests/(.*)': '<rootDir>/tests/$1',
+  },
   moduleNameMapper: {
     '@utils/(.*)': '<rootDir>/src/utils/$1',
     '@config/(.*)': '<rootDir>/src/config/$1',
@@ -17,5 +18,7 @@ module.exports = {
     '@schemas/(.*)': '<rootDir>/src/schemas/$1',
   },
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
+  verbose: true,
+  forceExit: true,
   clearMocks: true,
 };
