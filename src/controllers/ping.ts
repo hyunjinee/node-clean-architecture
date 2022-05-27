@@ -13,3 +13,5 @@ class PingController {
     };
   }
 }
+
+export default PingController;

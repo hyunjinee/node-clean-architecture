@@ -9,7 +9,8 @@
     "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
     "swagger": "tsoa spec",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint src/**/*.ts"
   },
   "dependencies": {
     "@typegoose/typegoose": "^9.8.1",

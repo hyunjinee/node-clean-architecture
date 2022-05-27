@@ -1,17 +1,21 @@
 import supertest from 'supertest';
 import express from 'express';
-import expressLoader from '@loaders/express';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
+import expressLoader from '@loaders/express';
 
 const app = express();
 
 describe('product', () => {
   beforeAll(async () => {
-    // await mongoose.connect('mongodb://127.0.0.1:27017/temp');
     const mongoServer = await MongoMemoryServer.create();
     await mongoose.connect(mongoServer.getUri());
     expressLoader(app);
+  });
+
+  afterAll(async () => {
+    await mongoose.disconnect();
+    await mongoose.connection.close();
   });
 
   describe('get product route', () => {
