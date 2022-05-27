@@ -9,7 +9,7 @@
     "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
     "swagger": "tsoa spec",
-    "test": "jest --detectOpenHandles  --watchAll",
+    "test": "jest",
     "lint": "eslint src/**/*.ts"
   },
   "dependencies": {

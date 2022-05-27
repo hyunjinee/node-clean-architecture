@@ -6,7 +6,7 @@ import expressLoader from '@loaders/express';
 
 const app = express();
 
-describe('product', () => {
+describe('user', () => {
   beforeAll(async () => {
     const mongoServer = await MongoMemoryServer.create();
     await mongoose.connect(mongoServer.getUri());
@@ -18,17 +18,18 @@ describe('product', () => {
     await mongoose.connection.close();
   });
 
-  describe('GET product', () => {
-    describe('given the product does not exist', () => {
-      it('should return a 404,', () => {
-        expect(true).toBe(true);
-      });
-    });
-
-    describe('create product', () => {
+  describe('POST /user', () => {
+    describe('given username, email and password', () => {
       it('should return a 201', async () => {
-        const productId = 'product-123';
-        await request(app).get(`/api/producs/${productId}`).expect(404);
+        const registerUser = jest.fn();
+
+        await request(app).post('/api/user/create').send({
+          username: 'test',
+          email: 'test@gmail.com',
+          password: 'test123',
+        });
+
+        expect(registerUser.mock.calls.length).toBe(0);
       });
     });
   });
